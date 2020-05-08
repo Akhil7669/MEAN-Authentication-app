@@ -1,0 +1,69 @@
+<!--<h2 clas="page-header">Register</h2>
+<form #f="ngForm" (ngSubmit)="submit(f)">
+    <div class="formgroup">
+        <label for="name">Name</label>
+        <input 
+        type="text" 
+        id="name" 
+        required
+        minlength="3" maxlength="10"
+        ngModel name="Name"
+        #name="ngModel"
+        (change)="log(name)"
+        class="form-control">
+        <div class="alert alert-danger" *ngIf="name.touched && !name.valid"> 
+            <div *ngIf="name.errors.required">Name is Required</div>
+            <div *ngIf="name.errors.minlength">Name should be minimum {{name.errors.minlength.requiredLength}} charecters</div>
+            <div *ngIf="name.errors.maxlength">Name shouldnot be maximun 10 charecters</div>
+        </div>
+    </div>
+    <div class="formgroup">
+        <label for="username">Username</label>
+        <input 
+        required 
+        minlength="3" maxlength="10"
+        type="text"
+        id = "username" 
+        ngModel name="username"
+        #username = "ngModel" 
+        class="form-control">
+        <div class="alert alert-danger" *ngIf = "username.touched && !username.valid">
+            <div *ngIf="username.errors.required" >Username required</div>
+            <div *ngIf="username.errors.minlength">Username required minimum 3 charecters</div>
+        </div>    
+    </div>
+    <div class="formgroup">
+        <label for="email">Email</label>
+        <input
+        required
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        type="text" 
+        id="email"
+        ngModel name="email"
+        #email = "ngModel"
+        class="form-control">
+        <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.pattern">Invalid email address</div>
+        </div>
+    </div>
+    <div class="formgroup">
+        <label for="">Password</label>
+        <input
+         required
+         pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30})"
+         type="text"
+         id="password"
+         ngModel name="password"
+         #password="ngModel"
+         class="form-control">
+         <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+             <div *ngIf="password.errors.required">Password is required</div>
+             <div *ngIf="password.errors.pattern">Please must be at least one lowercase char
+                - at least one uppercase char
+                - at least one number</div>
+         </div>
+    </div>
+    <input type="submit" [disabled] = "f.invalid" class="btn btn-primary" value="Submit">
+</form>
+-->
